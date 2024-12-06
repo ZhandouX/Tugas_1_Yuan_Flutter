@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => const MyApp(),
+          builder: (context) => MyApp(),
         ),
       );
     });
@@ -28,12 +28,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        // Lottie animation
+        // Lottie animation dengan ukuran penuh
         child: Lottie.asset(
-          'assets/plane.json',
-          width: 200,
-          height: 200,
-          fit: BoxFit.cover,
+          'assets/roket.json',
+          fit: BoxFit.cover, // Sesuaikan dengan ukuran layar
         ),
       ),
     );

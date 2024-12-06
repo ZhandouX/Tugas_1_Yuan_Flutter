@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  video_player: ^2.5.2
   animated_text_kit: ^4.2.2
   cupertino_icons: ^1.0.6
   flutter:
@@ -72,7 +73,7 @@ flutter:
    - assets/BgHome.jpg
    - assets/bgProfil.jpg
    - assets/book.json
-   - assets/plane.json
+   - assets/roket.json
    - assets/one_piece.jpg
    - assets/bleach.jpg
    - assets/demon_slayer.jpg
@@ -102,6 +103,7 @@ flutter:
    - assets/oshi_no_ko.jpg
    - assets/kaguya.jpg
    - assets/gatsu.jpg
+   - assets/aot_part2.jpg
 
    - assets/Xuyang.jpg
    - assets/Cavalry.jpg

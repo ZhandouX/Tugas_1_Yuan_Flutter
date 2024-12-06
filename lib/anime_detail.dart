@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'tonton_anime_screen.dart'; // Impor halaman TontonAnime
 
 class AnimeDetailScreen extends StatelessWidget {
   final Map<String, dynamic> anime;
@@ -44,7 +45,6 @@ class AnimeDetailScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.bottomCenter,
               children: [
-                // Gambar Anime
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
@@ -53,9 +53,8 @@ class AnimeDetailScreen extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                // Tombol Watch Now
                 Positioned(
-                  bottom: 0, // Posisi tombol berada di dalam gambar
+                  bottom: 0,
                   child: Container(
                     width: MediaQuery.of(context).size.width - 32,
                     padding: const EdgeInsets.symmetric(vertical: 2),
@@ -74,10 +73,12 @@ class AnimeDetailScreen extends StatelessWidget {
                     child: Center(
                       child: TextButton(
                         onPressed: () {
-                          // Handle watch now action here
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(content: Text('Watching ${anime['title']}!')),
-                          );
+                          Navigator.push(
+                          context,
+                      MaterialPageRoute(
+                        builder: (context) => TontonAnimeScreen(anime: anime), // Navigate to TayangScreen
+                      ),
+                            );                          
                         },
                         child: const Text(
                           'Watch Now',
