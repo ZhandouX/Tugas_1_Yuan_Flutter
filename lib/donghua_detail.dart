@@ -13,7 +13,7 @@ class DonghuaDetail extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 33, 37, 41), // Warna gelap
         title: Text(
-          'Detail Donghua',
+          'ANIDONG',
           style: GoogleFonts.eduNswActFoundation(
             textStyle: const TextStyle(
               color: Colors.white,
@@ -26,9 +26,9 @@ class DonghuaDetail extends StatelessWidget {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Color(0xFF1E1E30), // Biru tua kehitaman
-                Color(0xFF3A2E43), // Ungu tua
-                Color(0xFF000000), // Hitam
+                Color.fromARGB(255, 250, 95, 95),
+                Color.fromARGB(255, 250, 95, 95),
+                Color.fromARGB(255, 250, 95, 95),
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -57,9 +57,9 @@ class DonghuaDetail extends StatelessWidget {
                 const SizedBox(height: 16),
                 _buildDonghuaInfo(),
                 const SizedBox(height: 16),
-                _buildDescriptionCard(), // Menggunakan Card untuk sinopsis
-                const SizedBox(height: 16),
                 _buildEpisodes(),
+                const SizedBox(height: 16),
+                _buildDescriptionCard(), // Menggunakan Card untuk sinopsis
               ],
             ),
           ),
@@ -74,7 +74,7 @@ class DonghuaDetail extends StatelessWidget {
       child: Image.asset(
         donghua['image'],
         height: 300,
-        width: double.infinity,
+        width: 200,
         fit: BoxFit.cover,
       ),
     );
@@ -145,55 +145,10 @@ class DonghuaDetail extends StatelessWidget {
             ),
           ),
         ),
-      ],
-    );
-  }
 
-  Widget _buildDescriptionCard() {
-    return Card(
-      color: Colors.black.withOpacity(0.7),
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Text(
-          donghua['description'] ?? 'Sinopsis tidak tersedia.',
-          style: GoogleFonts.roboto(
-            textStyle: const TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildEpisodes() {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.7),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Episodes:',
-            style: GoogleFonts.roboto(
-              textStyle: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Total Episodes: ${donghua['episodes']}',
+        const SizedBox(height: 8),
+        Text(
+            'Total Episodes: ${donghua['totaleps']}',
             style: GoogleFonts.roboto(
               textStyle: const TextStyle(
                 color: Colors.white70,
@@ -231,7 +186,55 @@ class DonghuaDetail extends StatelessWidget {
               ),
             ),
           ),
+      ],
+    );
+  }
+
+  Widget _buildEpisodes() {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.black.withOpacity(0.7),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            donghua['mandarin'],
+            style: GoogleFonts.roboto(
+              textStyle: const TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          
         ],
+      ),
+    );
+  }
+
+  Widget _buildDescriptionCard() {
+    return Card(
+      color: Colors.black.withOpacity(0.7),
+      elevation: 4,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Text(
+          donghua['description'] ?? 'Sinopsis tidak tersedia.',
+          style: GoogleFonts.roboto(
+            textStyle: const TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+            ),
+          ),
+        ),
       ),
     );
   }

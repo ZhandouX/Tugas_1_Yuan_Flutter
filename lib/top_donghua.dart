@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:aplikasi_pertamaku/top_donghua.dart'; // Import AnimeDart page
-import 'package:aplikasi_pertamaku/donghua_tayang.dart';
-import 'package:aplikasi_pertamaku/donghua_detail.dart';
+import 'donghua_detail.dart';
 
-class DonghuaScreen extends StatefulWidget {
-  final Map<String, dynamic> donghua;
-  const DonghuaScreen({super.key, required this.donghua});
+class TopDonghua extends StatelessWidget {
+  const TopDonghua({super.key});
 
   @override
-  State<DonghuaScreen> createState() => _DonghuaScreenState();
-}
-
-class _DonghuaScreenState extends State<DonghuaScreen> {
-  final List<Map<String, dynamic>> donghuaList1 = [
+  
+  Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> donghuaList1 = [
     {'title': 'A Record  of a Mortal is Journey to Immortality',
       'mandarin': '凡人修仙传, Fanren Xiu Xian Chuan: Fanren Feng Qi Tian Nan',
       'rating': 9.60,
@@ -695,290 +690,20 @@ class _DonghuaScreenState extends State<DonghuaScreen> {
       'musim': '2016',
       'description': 'Dalam petualangan pertumbuhan selangkah demi selangkah, petualangan, trik, dan cinta serta persahabatan yang ditakdirkan terus terungkap.Dia, Long Haochen menganut semangat ksatria dan memenangkan pengakuan orang lain melalui kepribadian dan kerja kerasnya. Dia pertama kali membentuk “Kelompok Pemburu Iblis No. 1” dengan remaja berbakat lainnya di Enam Kuil untuk melawan iblis, berjuang untuk kelangsungan hidup dan martabat manusia.'
     },
-  ];
+    ];
 
-  final List<Map<String, dynamic>> donghuaList2 = [
-    {'title': '100.000 Years of Refining Qi',
-      'mandarin': 'Lian Qi Shi Wan Nian',
-      'rating': 8.00,
-      'image': 'assets/DONGHUA/Xuyang.jpg',
-      'genre': ['Action', 'Fantasy', 'Over Power', 'Reincarnation'],
-      'status': 'Ongoing',
-      'studio': 'Soyep',
-      'releaseDate': '18 February 2023',
-      'update': '3 December 2024',
-      'duration': '10 min.',
-      'totaleps': '189 Episodes',
-      'episodes': [ 
-        {'titleeps': 'Episode 1', 'url': 'link'},
-        {'titleeps': 'Episode 2', 'url': 'link'},
-        {'titleeps': 'Episode 3', 'url': 'link'},
-        {'titleeps': 'Episode 4', 'url': 'link'},
-        {'titleeps': 'Episode 5', 'url': 'link'},
-        {'titleeps': 'Episode 6', 'url': 'link'},
-        {'titleeps': 'Episode 7', 'url': 'link'},
-        {'titleeps': 'Episode 8', 'url': 'link'},
-        {'titleeps': 'Episode 9', 'url': 'link'},
-        {'titleeps': 'Episode 10', 'url': 'link'},
-        {'titleeps': 'Episode 11', 'url': 'link'},
-        {'titleeps': 'Episode 12', 'url': 'link'},
-        {'titleeps': 'Episode 13', 'url': 'link'},
-        {'titleeps': 'Episode 14', 'url': 'link'},
-        {'titleeps': 'Episode 15', 'url': 'link'},
-        {'titleeps': 'Episode 16', 'url': 'link'},
-        {'titleeps': 'Episode 17', 'url': 'link'},
-        {'titleeps': 'Episode 18', 'url': 'link'},
-        {'titleeps': 'Episode 19', 'url': 'link'},
-        {'titleeps': 'Episode 20', 'url': 'link'},
-        {'titleeps': 'Episode 21', 'url': 'link'},
-        {'titleeps': 'Episode 22', 'url': 'link'},
-        {'titleeps': 'Episode 23', 'url': 'link'},
-        {'titleeps': 'Episode 24', 'url': 'link'},
-        {'titleeps': 'Episode 25', 'url': 'link'},
-        {'titleeps': 'Episode 26', 'url': 'link'},
-        {'titleeps': 'Episode 27', 'url': 'link'},
-        {'titleeps': 'Episode 28', 'url': 'link'},
-        {'titleeps': 'Episode 29', 'url': 'link'},
-        {'titleeps': 'Episode 30', 'url': 'link'},
-        {'titleeps': 'Episode 31', 'url': 'link'},
-        {'titleeps': 'Episode 32', 'url': 'link'},
-        {'titleeps': 'Episode 33', 'url': 'link'},
-        {'titleeps': 'Episode 34', 'url': 'link'},
-        {'titleeps': 'Episode 35', 'url': 'link'},
-        {'titleeps': 'Episode 36', 'url': 'link'},
-        {'titleeps': 'Episode 37', 'url': 'link'},
-        {'titleeps': 'Episode 38', 'url': 'link'},
-        {'titleeps': 'Episode 39', 'url': 'link'},
-        {'titleeps': 'Episode 40', 'url': 'link'},
-        {'titleeps': 'Episode 41', 'url': 'link'},
-        {'titleeps': 'Episode 42', 'url': 'link'},
-        {'titleeps': 'Episode 44', 'url': 'link'},
-        {'titleeps': 'Episode 45', 'url': 'link'},
-        {'titleeps': 'Episode 46', 'url': 'link'},
-        {'titleeps': 'Episode 47', 'url': 'link'},
-        {'titleeps': 'Episode 48', 'url': 'link'},
-        {'titleeps': 'Episode 49', 'url': 'link'},
-        {'titleeps': 'Episode 50', 'url': 'link'},
-        {'titleeps': 'Episode 51', 'url': 'link'},
-        {'titleeps': 'Episode 52', 'url': 'link'},
-        {'titleeps': 'Episode 53', 'url': 'link'},
-        {'titleeps': 'Episode 54', 'url': 'link'},
-        {'titleeps': 'Episode 55', 'url': 'link'},
-        {'titleeps': 'Episode 56', 'url': 'link'},
-        {'titleeps': 'Episode 57', 'url': 'link'},
-        {'titleeps': 'Episode 58', 'url': 'link'},
-        {'titleeps': 'Episode 59', 'url': 'link'},
-        {'titleeps': 'Episode 60', 'url': 'link'},
-        {'titleeps': 'Episode 61', 'url': 'link'},
-        {'titleeps': 'Episode 62', 'url': 'link'},
-        {'titleeps': 'Episode 63', 'url': 'link'},
-        {'titleeps': 'Episode 64', 'url': 'link'},
-        {'titleeps': 'Episode 65', 'url': 'link'},
-        {'titleeps': 'Episode 66', 'url': 'link'},
-        {'titleeps': 'Episode 67', 'url': 'link'},
-        {'titleeps': 'Episode 68', 'url': 'link'},
-        {'titleeps': 'Episode 69', 'url': 'link'},
-        {'titleeps': 'Episode 70', 'url': 'link'},
-        {'titleeps': 'Episode 71', 'url': 'link'},
-        {'titleeps': 'Episode 72', 'url': 'link'},
-        {'titleeps': 'Episode 73', 'url': 'link'},
-        {'titleeps': 'Episode 74', 'url': 'link'},
-        {'titleeps': 'Episode 75', 'url': 'link'},
-        {'titleeps': 'Episode 76', 'url': 'link'},
-        {'titleeps': 'Episode 77', 'url': 'link'},
-        {'titleeps': 'Episode 78', 'url': 'link'},
-        {'titleeps': 'Episode 79', 'url': 'link'},
-        {'titleeps': 'Episode 80', 'url': 'link'},
-        {'titleeps': 'Episode 81', 'url': 'link'},
-        {'titleeps': 'Episode 82', 'url': 'link'},
-        {'titleeps': 'Episode 83', 'url': 'link'},
-        {'titleeps': 'Episode 84', 'url': 'link'},
-        {'titleeps': 'Episode 85', 'url': 'link'},
-        {'titleeps': 'Episode 86', 'url': 'link'},
-        {'titleeps': 'Episode 87', 'url': 'link'},
-        {'titleeps': 'Episode 88', 'url': 'link'},
-        {'titleeps': 'Episode 89', 'url': 'link'},
-        {'titleeps': 'Episode 90', 'url': 'link'},
-        {'titleeps': 'Episode 91', 'url': 'link'},
-        {'titleeps': 'Episode 92', 'url': 'link'},
-        {'titleeps': 'Episode 93', 'url': 'link'},
-        {'titleeps': 'Episode 94', 'url': 'link'},
-        {'titleeps': 'Episode 95', 'url': 'link'},
-        {'titleeps': 'Episode 96', 'url': 'link'},
-        {'titleeps': 'Episode 97', 'url': 'link'},
-        {'titleeps': 'Episode 98', 'url': 'link'},
-        {'titleeps': 'Episode 99', 'url': 'link'},
-        {'titleeps': 'Episode 100', 'url': 'link'},
-        {'titleeps': 'Episode 101', 'url': 'link'},
-        {'titleeps': 'Episode 102', 'url': 'link'},
-        {'titleeps': 'Episode 103', 'url': 'link'},
-        {'titleeps': 'Episode 104', 'url': 'link'},
-        {'titleeps': 'Episode 105', 'url': 'link'},
-        {'titleeps': 'Episode 106', 'url': 'link'},
-        {'titleeps': 'Episode 107', 'url': 'link'},
-        {'titleeps': 'Episode 108', 'url': 'link'},
-        {'titleeps': 'Episode 109', 'url': 'link'},
-        {'titleeps': 'Episode 110', 'url': 'link'},
-        {'titleeps': 'Episode 111', 'url': 'link'},
-        {'titleeps': 'Episode 112', 'url': 'link'},
-        {'titleeps': 'Episode 113', 'url': 'link'},
-        {'titleeps': 'Episode 114', 'url': 'link'},
-        {'titleeps': 'Episode 115', 'url': 'link'},
-        {'titleeps': 'Episode 116', 'url': 'link'},
-        {'titleeps': 'Episode 117', 'url': 'link'},
-        {'titleeps': 'Episode 118', 'url': 'link'},
-        {'titleeps': 'Episode 119', 'url': 'link'},
-        {'titleeps': 'Episode 120', 'url': 'link'},
-        {'titleeps': 'Episode 121', 'url': 'link'},
-        {'titleeps': 'Episode 122', 'url': 'link'},
-        {'titleeps': 'Episode 123', 'url': 'link'},
-        {'titleeps': 'Episode 124', 'url': 'link'},
-        {'titleeps': 'Episode 125', 'url': 'link'},
-        {'titleeps': 'Episode 126', 'url': 'link'},
-        {'titleeps': 'Episode 127', 'url': 'link'},
-        {'titleeps': 'Episode 128', 'url': 'link'},
-        {'titleeps': 'Episode 129', 'url': 'link'},
-        {'titleeps': 'Episode 130', 'url': 'link'},
-        {'titleeps': 'Episode 131', 'url': 'link'},
-        {'titleeps': 'Episode 132', 'url': 'link'},
-        {'titleeps': 'Episode 133', 'url': 'link'},
-        {'titleeps': 'Episode 134', 'url': 'link'},
-        {'titleeps': 'Episode 135', 'url': 'link'},
-        {'titleeps': 'Episode 136', 'url': 'link'},
-        {'titleeps': 'Episode 137', 'url': 'link'},
-        {'titleeps': 'Episode 138', 'url': 'link'},
-        {'titleeps': 'Episode 139', 'url': 'link'},
-        {'titleeps': 'Episode 140', 'url': 'link'},
-        {'titleeps': 'Episode 141', 'url': 'link'},
-        {'titleeps': 'Episode 142', 'url': 'link'},
-        {'titleeps': 'Episode 143', 'url': 'link'},
-        {'titleeps': 'Episode 144', 'url': 'link'},
-        {'titleeps': 'Episode 145', 'url': 'link'},
-        {'titleeps': 'Episode 146', 'url': 'link'},
-        {'titleeps': 'Episode 147', 'url': 'link'},
-        {'titleeps': 'Episode 148', 'url': 'link'},
-        {'titleeps': 'Episode 149', 'url': 'link'},
-        {'titleeps': 'Episode 150', 'url': 'link'},
-        {'titleeps': 'Episode 151', 'url': 'link'},
-        {'titleeps': 'Episode 152', 'url': 'link'},
-        {'titleeps': 'Episode 153', 'url': 'link'},
-        {'titleeps': 'Episode 154', 'url': 'link'},
-        {'titleeps': 'Episode 155', 'url': 'link'},
-        {'titleeps': 'Episode 156', 'url': 'link'},
-        {'titleeps': 'Episode 157', 'url': 'link'},
-        {'titleeps': 'Episode 158', 'url': 'link'},
-        {'titleeps': 'Episode 159', 'url': 'link'},
-        {'titleeps': 'Episode 160', 'url': 'link'},
-        {'titleeps': 'Episode 161', 'url': 'link'},
-        {'titleeps': 'Episode 162', 'url': 'link'},
-        {'titleeps': 'Episode 163', 'url': 'link'},
-        {'titleeps': 'Episode 164', 'url': 'link'},
-        {'titleeps': 'Episode 165', 'url': 'link'},
-        {'titleeps': 'Episode 166', 'url': 'link'},
-        {'titleeps': 'Episode 167', 'url': 'link'},
-        {'titleeps': 'Episode 168', 'url': 'link'},
-        {'titleeps': 'Episode 169', 'url': 'link'},
-        {'titleeps': 'Episode 170', 'url': 'link'},
-        {'titleeps': 'Episode 171', 'url': 'link'},
-        {'titleeps': 'Episode 172', 'url': 'link'},
-        {'titleeps': 'Episode 173', 'url': 'link'},
-        {'titleeps': 'Episode 174', 'url': 'link'},
-        {'titleeps': 'Episode 175', 'url': 'link'},
-        {'titleeps': 'Episode 176', 'url': 'link'},
-        {'titleeps': 'Episode 177', 'url': 'link'},
-        {'titleeps': 'Episode 178', 'url': 'link'},
-        {'titleeps': 'Episode 179', 'url': 'link'},
-        {'titleeps': 'Episode 180', 'url': 'link'},
-        {'titleeps': 'Episode 181', 'url': 'link'},
-        {'titleeps': 'Episode 182', 'url': 'link'},
-        {'titleeps': 'Episode 183', 'url': 'link'},
-        {'titleeps': 'Episode 184', 'url': 'link'},
-        {'titleeps': 'Episode 185', 'url': 'link'},
-        {'titleeps': 'Episode 186', 'url': 'link'},
-        {'titleeps': 'Episode 187', 'url': 'link'},
-        {'titleeps': 'Episode 188', 'url': 'link'},
-        {'titleeps': 'Episode 189', 'url': 'link'},
-      ],
-      'jenis': 'Donghua',
-      'musim': '2023',
-      'description': '100.000 tahun yang lalu, Sekte Tianlan menguasai dunia kultivasi, dan semua murid dari klan itu bangga dan tak terkalahkan. Hanya Xu Yang, murid pendiri sekte, yang berada pada tahap pemurnian Qi, untuk menerobos dan naik secepat mungkin, Xu Yang pergi ke pengasingan selama sepuluh ribu tahun. Ketika dia keluar dari pengasingan, dunia kultivasi telah menurun, dan hanya tiga atau lima murid Sekte Tianlan yang tersisa. Melihat sekte itu akan dimusnahkan, Xu Yang memukul mundur musuh yang kuat dan bersumpah untuk memimpin Sekte Tianlan kembali ke puncaknya! Ketika Sekte berkembang, kebenaran tentang kultivasi Xu Yang terungkap selangkah demi selangkah, dan misteri yang melintasi tiga alam manusia, iblis, dan abadi terungkap ke publik. Akankah dia menjadi dewa dengan satu pikiran, atau iblis dengan satu pikiran? Hidup dan mati dunia terletak di telapak tangan Xu Yang!'
-    },
-    {'title': '36 Cavalry',
-      'mandarin': 'Sanshiliu Qi',
-      'rating': 7.72,
-      'image': 'assets/DONGHUA/Cavalry.jpg',
-      'genre': ['Adventure', 'Drama', 'Dinasty'],
-      'status': 'Completed',
-      'studio': 'CG Yeah',
-      'releaseDate': '09 October 2023',
-      'update': '28 December 2023',
-      'duration': '15 min.',
-      'totaleps': '13 Episodes',
-      'episodes': [ 
-        {'titleeps': 'Episode 1', 'url': 'link'},
-        {'titleeps': 'Episode 2', 'url': 'link'},
-        {'titleeps': 'Episode 3', 'url': 'link'},
-        {'titleeps': 'Episode 4', 'url': 'link'},
-        {'titleeps': 'Episode 5', 'url': 'link'},
-        {'titleeps': 'Episode 6', 'url': 'link'},
-        {'titleeps': 'Episode 7', 'url': 'link'},
-        {'titleeps': 'Episode 8', 'url': 'link'},
-        {'titleeps': 'Episode 9', 'url': 'link'},
-        {'titleeps': 'Episode 10', 'url': 'link'},
-        {'titleeps': 'Episode 11', 'url': 'link'},
-        {'titleeps': 'Episode 12', 'url': 'link'},
-        {'titleeps': 'Episode 13', 'url': 'link'},
-      ],
-      'jenis': 'Donghua Film',
-      'musim': '2023',
-      'description': '36 Cavalry (Sanshiliu Qi) Cerita berlatar belakang pada masa Dinasti Han. Kaisar Ming memberikan jimat burung walet perunggu kepada Ban Chao, seorang keturunan Keluarga Shi, dan mengirimnya ke Wilayah Barat untuk mencari jalan untuk hidup selamanya dan Buddha Emas muncul dalam mimpinya. Selain untuk memenuhi keinginan kaisar, ia juga bertujuan untuk mencari asal usul keluarganya dan mencari tahu orang yang menjebak dan membunuh ayahnya.'
-    },
-    {'title': '4 Cut Hero',
-      'mandarin': 'Si Ge Yongzhe',
-      'rating': 8.00,
-      'image': 'assets/4_cut_hero.jpg',
-      'genre': ['Fantasy', 'Hero'],
-      'status': 'Completed',
-      'studio': 'Phantom',
-      'releaseDate': '17 July 2023',
-      'update': '27 September 2023',
-      'duration': '7 min.',
-      'totaleps': '10 Episode',
-      'episodes': [ 
-        {'titleeps': 'Episode 1', 'url': 'link'},
-        {'titleeps': 'Episode 2', 'url': 'link'},
-        {'titleeps': 'Episode 3', 'url': 'link'},
-        {'titleeps': 'Episode 4', 'url': 'link'},
-        {'titleeps': 'Episode 5', 'url': 'link'},
-        {'titleeps': 'Episode 6', 'url': 'link'},
-        {'titleeps': 'Episode 7', 'url': 'link'},
-        {'titleeps': 'Episode 8', 'url': 'link'},
-        {'titleeps': 'Episode 9', 'url': 'link'},
-        {'titleeps': 'Episode 10', 'url': 'link'},
-      ],
-      'jenis': 'Donghua',
-      'musim': '2023',
-      'description': '4 Cut Hero (Si Ge Yongzhe) adalah Donghua bergenre fantasi-pahlawan. Bertahun-tahun yang lalu, Krodin, Raja Iblis, mencoba mengambil alih dunia, dan dihentikan oleh pahlawan Zeed. Sayangnya, Zeed kemudian mengetahui bahwa dengan kekalahan raja iblis, keahliannya tidak diperlukan lagi “menyelamatkan dunia” tidak banyak berguna dalam resumenya, dan dia tidak memiliki keterampilan yang berguna selain membunuh raja iblis dan meledakkan segalanya. Akibatnya, dia menjadi seorang Hikikomori dan Otaku dan menarik diri dari dunia…'
-    },
 
-  ];
-
-  String searchText = '';
-  Set<String> hoverDonghua = Set();
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(201, 255, 140, 0), // Orange color
+        backgroundColor: const Color.fromARGB(201, 34, 167, 255),
         title: Text(
-          'DONGHUA',
+          'Top Donghua',
           style: GoogleFonts.eduNswActFoundation(
             textStyle: const TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 28,
+              fontSize: 30,
             ),
           ),
         ),
@@ -1000,288 +725,148 @@ class _DonghuaScreenState extends State<DonghuaScreen> {
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color(0xFF1E1E30), // Biru tua kehitaman
-              Color(0xFF1E1E30), // Ungu tua
-              Color(0xFF000000), // Hitam
+              Color(0xFF1E1E30),
+              Color(0xFF1E1E30),
+              Color(0xFF000000),
             ],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
         ),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildSearchBar(),
-                const SizedBox(height: 10),
-
-                // Top Anime Teratas
-                _buildSectionHeader(
-                  context,
-                  'Top Donghua Teratas',
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const TopDonghua(),
-                      ),
-                    );
-                  },
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [  // Pemanggilan search bar
+            const SizedBox(height: 10),  // Jarak antara search bar dan GridView
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 8.0,
+                  mainAxisSpacing: 8.0,
+                  childAspectRatio: 0.7,
                 ),
-                const SizedBox(height: 5),
-
-                _buildDonghuaList(
-                  donghuaList1
-                      .where((donghua) => donghua['title']
-                          .toLowerCase()
-                          .contains(searchText.toLowerCase()))
-                      .toList(),
-                ),
-                const SizedBox(height: 5),
-                _buildSectionHeader(
-                  context, 
-                  'Sedang Tayang',
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const DonghuaTayang(),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(height: 5),
-                _buildDonghuaList(
-                  donghuaList2
-                      .where((donghua) => donghua['title']
-                          .toLowerCase()
-                          .contains(searchText.toLowerCase()))
-                      .toList(),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-
-//Search Bar
-  Widget _buildSearchBar() {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
-    child: Material(
-      elevation: 3, // Memberikan bayangan lembut
-      borderRadius: BorderRadius.circular(12.0),
-      child: TextField(
-        onChanged: (value) {
-          setState(() {
-            searchText = value;
-          });
-        },
-        decoration: InputDecoration(
-          prefixIcon: const Icon(Icons.search, color: Color.fromARGB(255, 214, 214, 214)), // Ikon pencarian di sebelah kiri
-          hintText: 'Search Donghua',
-          hintStyle: GoogleFonts.roboto(color: const Color.fromARGB(255, 214, 214, 214), fontSize: 16.0),
-          filled: true,
-          fillColor: const Color.fromARGB(255, 61, 61, 61), // Warna latar belakang kotak pencarian
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.0),
-            borderSide: BorderSide.none,
-          ),
-          contentPadding: const EdgeInsets.symmetric(vertical: 12.0), // Padding dalam untuk teks
-        ),
-      ),
-    ),
-  );
-}
-
-
-// Top Donghua Teratas | Sedang Tayang
- Widget _buildSectionHeader(
-  BuildContext context,
-  String title, {
-  required VoidCallback onPressed,
-}) {
-  return GestureDetector(
-    onTap: onPressed,
-    child: Card(
-      elevation: 0.0, // Kurangi shadow agar kesan samar lebih terasa
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(13.0),
-      ),
-      margin: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 3.0),
-      child: Container(
-        padding: const EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-          // Gradasi dari biru malam ke biru malam gelap pekat
-          gradient: const LinearGradient(
-            colors: [
-              Color.fromARGB(255, 61, 61, 61), // Biru malam
-              Color.fromARGB(255, 61, 61, 61), // Biru malam gelap pekat
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              title,
-              style: const TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+                itemCount: donghuaList1.length,
+                itemBuilder: (context, index) {
+                  final donghua = donghuaList1[index];
+                  return _buildAnimeCard(context, donghua);
+                },
               ),
-            ),
-            const Icon(
-              Icons.arrow_forward_ios,
-              color: Colors.white,
-              size: 16.0,
             ),
           ],
         ),
       ),
-    ),
-  );
-}
-
-
-
-  // List Donghua
-  Widget _buildDonghuaList(List<Map<String, dynamic>> donghuaList) {
-    return SizedBox(
-      height: 230,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: donghuaList.length,
-        itemBuilder: (context, index) {
-          final donghua = donghuaList[index];
-          return _buildDonghuaItem(donghua);
-        },
-      ),
     );
   }
-
-
-
-// List Donghua
-  Widget _buildDonghuaItem(Map<String, dynamic> donghua) {
-  return GestureDetector(
-    onTap: () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => DonghuaDetail(
-            donghua: {
-              'title': donghua['title'],
-              'mandarin': donghua['mandarin'],
-              'image': donghua['image'],
-              'genre': donghua['genre'],
-              'rating': donghua['rating'],
-              'status': donghua['status'],
-              'studio': donghua['studio'],
-              'releaseDate': donghua['releaseDate'],
-              'update': donghua['update'],
-              'duration': donghua['duration'],
-              'totaleps': donghua['totaleps'],
-              'episodes': {donghua['titleeps'], donghua['url']},
-              'jenis': donghua['jenis'],
-              'musim': donghua['musim'],
-              'description': donghua['description'],
-            },
-          ),
-        ),
-      );
-    },
-    child: Container(
-      width: 160,
-      margin: const EdgeInsets.symmetric(horizontal: 5.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            blurRadius: 6.0,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(8.0),
-        child: Stack(
-          children: [
-            Image.asset(
-              donghua['image'],
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
+  Widget _buildAnimeCard(BuildContext context, Map<String, dynamic> donghua) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DonghuaDetail(
+              donghua: {
+                'title': donghua['title'],
+                'mandarin': donghua['mandarin'],
+                'image': donghua['image'],
+                'genre': donghua['genre'],
+                'rating': donghua['rating'],
+                'status': donghua['status'],
+                'studio': donghua['studio'],
+                'releaseDate': donghua['releaseDate'],
+                'update': donghua['update'],
+                'duration': donghua['duration'],
+                'totaleps': donghua['totaleps'],
+                'episodes': {donghua['titleeps'], donghua['url']},
+                'jenis': donghua['jenis'],
+                'musim': donghua['musim'],
+                'description': donghua['description'],
+              },
             ),
-            // Rating di posisi topleft
-            Positioned(
-              top: 8,
-              left: 8,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 4.0),
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.7),
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      color: Colors.yellow,
-                      size: 14.0,
-                    ),
-                    const SizedBox(width: 4),
-                    Text(
-                      donghua['rating'].toString(), // Rating dari data
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12.0,
-                        fontWeight: FontWeight.bold,
+          ),
+        );
+      },
+      child: Container(
+        width: 160,
+        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              blurRadius: 6.0,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8.0),
+          child: Stack(
+            children: [
+              // Gambar Donghua
+              Image.asset(
+                donghua['image'],
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+              // Rating di posisi topleft
+              Positioned(
+                top: 8,
+                left: 8,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 4.0),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.star,
+                        color: Colors.yellow,
+                        size: 14.0,
                       ),
-                    ),
-                  ],
+                      const SizedBox(width: 4),
+                      Text(
+                        donghua['rating'].toString(), // Rating dari data
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 12.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            // Judul di posisi bottom center
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 4.0),
-                decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.6),
-                ),
-                child: Text(
-                  donghua['title'],
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.roboto(
-                    textStyle: const TextStyle(
+              // Judul di posisi bottom center
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 4.0),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.6),
+                  ),
+                  child: Text(
+                    donghua['title'],
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 14.0,
                       fontWeight: FontWeight.bold,
                     ),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
 
-}

@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
   
   // Daftar gambar yang berbeda
   final List<String> imagePaths = [
-    'assets/aot_part2.jpg', // Gambar pertama
-    'assets/Xuyang.jpg', // Gambar kedua
+    'assets/aot_part2.jpg',
+    'assets/DONGHUA/swallowed_star.jpg',
   ];
 
   @override
@@ -535,11 +535,9 @@ class _FullImageViewState extends State<FullImageView> {
 
 class AnimatedLogo extends StatefulWidget {
   const AnimatedLogo({super.key});
-
   @override
   State<AnimatedLogo> createState() => _AnimatedLogoState();
 }
-
 class _AnimatedLogoState extends State<AnimatedLogo> {
   bool isZoomed = false;
 

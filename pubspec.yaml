@@ -79,9 +79,10 @@ flutter:
    - assets/demon_slayer.jpg
    - assets/jujutsu.jpg
    - assets/bgAnime.jpg
+   - assets/BgAnimeScrn.jpg
    - assets/sousou.jpg
    - assets/Brotherhood.jpg
-   - assets/aot1.jpg
+   - assets/aotf.jpg
    - assets/SteinsGate.jpg
    - assets/gintama.jpg
    - assets/HunterxHunter.jpg
@@ -90,11 +91,9 @@ flutter:
    - assets/uzumaki.jpg
    - assets/BlueLock.jpg
    - assets/Au_no_Hako.jpg
-   - assets/BleachShoukokutan.jpg
-   - assets/seirei_gensouki.jpg
+   - assets/seirei_gensouki.png
    - assets/love_live.jpg
    - assets/natsume_yuujinchou.jpg
-   - assets/hoshifuru_ouka1.jpg
    - assets/arifureta.jpg
    - assets/saikyou.jpg
    - assets/komonohashi.jpg
@@ -104,10 +103,27 @@ flutter:
    - assets/kaguya.jpg
    - assets/gatsu.jpg
    - assets/aot_part2.jpg
-
-   - assets/Xuyang.jpg
-   - assets/Cavalry.jpg
    - assets/4_cut_hero.jpg
+   - assets/yowai.png
+   - assets/COVER/sousou.jpg
+   - assets/COVER/Brotherhood_cover.jpg
+   - assets/COVER/sampul.png
+   - assets/COVER/seirei_gensouki_cover.jpg
+   - assets/COVER/love_live_cover.jpg
+   - assets/COVER/yowai_cover.png
+   - assets/COVER/natsume_yuujinchou_cover.png
+   - assets/COVER/kimi_no_nawa_cover.jpg
+
+
+   - assets/DONGHUA/Xuyang.jpg
+   - assets/DONGHUA/Cavalry.jpg
+   - assets/DONGHUA/HanLi.jpg
+   - assets/DONGHUA/xi_xing_ji.jpg
+   - assets/DONGHUA/soul_land2_life.jpg
+   - assets/DONGHUA/swallowed_star.jpg
+   - assets/DONGHUA/BTTH.jpg
+   - assets/DONGHUA/perfect_world.jpg
+   - assets/DONGHUA/throne_of_seal.jpg
 fonts:
     - family: EduAustraliaVicWaNtHand
       fonts:

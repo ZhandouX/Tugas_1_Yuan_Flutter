@@ -37,6 +37,7 @@ class AnimeDetailScreen extends StatelessWidget {
           ),
         ),
       ),
+      backgroundColor: const Color.fromARGB(255, 18, 18, 18), // Dark background color
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -74,11 +75,12 @@ class AnimeDetailScreen extends StatelessWidget {
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
-                          context,
-                      MaterialPageRoute(
-                        builder: (context) => TontonAnimeScreen(anime: anime), // Navigate to TayangScreen
-                      ),
-                            );                          
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  TontonAnimeScreen(anime: anime), // Navigate to TontonAnimeScreen
+                            ),
+                          );
                         },
                         child: const Text(
                           'Watch Now',
@@ -95,63 +97,71 @@ class AnimeDetailScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 20),
-            Text(
-              anime['title'],
-              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Score : ${anime['rating']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Genres : ${anime['genre'].join(', ')}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Status : ${anime['status']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Studio : ${anime['studio']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Release Date : ${anime['releaseDate']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Update : ${anime['update']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Duration : ${anime['duration']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Episode : ${anime['episodes']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Jenis : ${anime['jenis']}',
-              style: const TextStyle(fontSize: 12),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              'Musim : ${anime['musim']}',
-              style: const TextStyle(fontSize: 12),
+            Container(
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 33, 33, 33),
+                    Color.fromARGB(255, 48, 48, 48),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Table(
+                columnWidths: const {
+                  0: FractionColumnWidth(0.3),
+                  1: FractionColumnWidth(0.7),
+                },
+                border: TableBorder.all(color: Colors.grey, width: 0.5),
+                children: [
+                  _buildTableRow('Title', anime['title']),
+                  _buildTableRow('Score', anime['rating'].toStringAsFixed(1)),
+                  _buildTableRow('Genres', anime['genre'].join(', ')),
+                  _buildTableRow('Status', anime['status']),
+                  _buildTableRow('Studio', anime['studio']),
+                  _buildTableRow('Release Date', anime['releaseDate']),
+                  _buildTableRow('Update', anime['update']),
+                  _buildTableRow('Duration', anime['duration']),
+                  _buildTableRow('Episodes', anime['totaleps']),
+                  _buildTableRow('Jenis', anime['jenis']),
+                  _buildTableRow('Musim', anime['musim']),
+                ],
+              ),
             ),
           ],
         ),
       ),
+    );
+  }
+
+  TableRow _buildTableRow(String label, dynamic value) {
+    return TableRow(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            label,
+            style: const TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            value.toString(),  // Pastikan konversi nilai ke String
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
